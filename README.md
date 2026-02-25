@@ -56,3 +56,51 @@ npm start - Start production server
 Deployment
 The backend is deployed on Render.com. Set environment variables in Render dashboard.
 
+
+## 🌐 Step 7: Deployment Guide for Render.com
+
+### Deploying Backend to Render
+
+1. **Push code to GitHub**
+```bash
+git init
+git add .
+git commit -m "Phase 1 complete: Global layout and theming"
+git branch -M main
+git remote add origin https://github.com/yourusername/moda-fashion.git
+git push -u origin main
+
+Create a Render Account at https://render.com
+
+Create New Web Service
+
+Click "New +" → "Web Service"
+
+Connect your GitHub repository
+
+Select the branch (main)
+
+Configure Backend Service
+
+Name: moda-fashion-backend
+
+Environment: Node
+
+Root Directory: backend
+
+Build Command: npm install
+
+Start Command: npm start
+
+Plan: Free
+
+Add Environment Variables
+
+NODE_ENV=production
+PORT=5000
+CLIENT_URL=https://your-frontend-url.vercel.app
+
+Deploy - Click "Create Web Service"
+
+
+
