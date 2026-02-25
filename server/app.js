@@ -36,6 +36,11 @@ app.use('/api', routes);
 //handle 404 errors - when someone tries to visit a page that does not exist 
 app.use(notFound);
 
+//Added root route for Render health check
+app.get("/", (req, res) => {
+  res.send("Moda API is running");
+});
+
 //global error handler - catches any errors and sends nice responses 
 app.use(errorHandler);
 
